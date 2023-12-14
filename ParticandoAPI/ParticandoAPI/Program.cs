@@ -10,6 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddTransient<ICollectionPointRepository, CollectionPointRepository>();
+builder.Services.AddTransient<INeighborhoodRepositry, NeighborhoodRepository>();
 
 builder.Services.AddSwaggerGen();
 

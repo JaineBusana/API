@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jaine.busana\\source\\repos\\API\\ParticandoAPI\\ParticandoAPI\\ParticandoAPI.csproj": {}
+    "C:\\Users\\jaine.busana\\Documents\\API\\ParticandoAPI\\ParticandoAPI\\ParticandoAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jaine.busana\\source\\repos\\API\\ParticandoAPI\\ParticandoAPI\\ParticandoAPI.csproj": {
+    "C:\\Users\\jaine.busana\\Documents\\API\\ParticandoAPI\\ParticandoAPI\\ParticandoAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jaine.busana\\source\\repos\\API\\ParticandoAPI\\ParticandoAPI\\ParticandoAPI.csproj",
+        "projectUniqueName": "C:\\Users\\jaine.busana\\Documents\\API\\ParticandoAPI\\ParticandoAPI\\ParticandoAPI.csproj",
         "projectName": "ParticandoAPI",
-        "projectPath": "C:\\Users\\jaine.busana\\source\\repos\\API\\ParticandoAPI\\ParticandoAPI\\ParticandoAPI.csproj",
+        "projectPath": "C:\\Users\\jaine.busana\\Documents\\API\\ParticandoAPI\\ParticandoAPI\\ParticandoAPI.csproj",
         "packagesPath": "C:\\Users\\jaine.busana\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jaine.busana\\source\\repos\\API\\ParticandoAPI\\ParticandoAPI\\obj\\",
+        "outputPath": "C:\\Users\\jaine.busana\\Documents\\API\\ParticandoAPI\\ParticandoAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

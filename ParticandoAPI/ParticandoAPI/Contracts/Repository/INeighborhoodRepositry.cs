@@ -1,9 +1,10 @@
 ﻿using ParticandoAPI.DTO;
+using ParticandoAPI.Entity;
 
 namespace ParticandoAPI.Contracts.Repository
 {
     public interface INeighborhoodRepositry
     {
-        Task Create(NeighborhoodDTO neighborhood);
+        Task<IEnumerable<NeighborhoodEntity>> Get();
     }
 }

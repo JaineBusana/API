@@ -11,8 +11,8 @@ namespace ParticandoAPI.Repository
         public async Task Create(CollectionPointDTO collection)
         {
             string sql = @"
-                INSERT INTO collection_point (Name, Address, Telephone, Residue)
-                           VALUE (@Name, @Address, @Telephone, @Residue)
+                INSERT INTO collection_point (Name, Address, Telephone, Residue, Neighborhood_Id)
+                           VALUE (@Name, @Address, @Telephone, @Residue, @Neighborhood_Id)
             ";
             await Execute(sql, collection);
         }
@@ -49,8 +49,9 @@ namespace ParticandoAPI.Repository
                 UPDATE collection_point 
                    SET Name = @Name, 
                        Address = @Address, 
-                       Telephone = @Telephone
-                       Residue = @Residue
+                       Telephone = @Telephone,
+                       Residue = @Residue,
+                       Neighborhood_Id = @Neighborhood_Id
                  WHERE Id = @Id
             ";
             await Execute(sql, collection);
