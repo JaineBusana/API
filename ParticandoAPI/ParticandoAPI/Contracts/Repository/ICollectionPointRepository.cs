@@ -10,5 +10,7 @@ namespace ParticandoAPI.Contracts.Repository
         Task Delete(int id);
         Task<IEnumerable<CollectionPointEntity>> Get();
         Task<CollectionPointEntity> GetById(int id);
+
+        Task<CollectionPointTokenDTO> CollectionPointLogin(CollectionPointLoginDTO collectionPointLogin);
     }
 }

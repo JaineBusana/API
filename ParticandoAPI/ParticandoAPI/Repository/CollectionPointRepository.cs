@@ -43,6 +43,16 @@ namespace ParticandoAPI.Repository
             return await GetConnection().QueryFirstAsync<CollectionPointEntity>(sql, new {id});
         }
 
+        public async Task<CollectionPointTokenDTO> CollectionPointLogin(CollectionPointLoginDTO collectionPointLogin)
+        {
+            string sql = "SELECT * FROM collection_point WHERE Name = @Name AND Telephone = @Telephone";
+            CollectionPointEntity collectionPoint = await GetConnection().QueryFirstAsync<CollectionPointEntity>(sql, collectionPointLogin);
+            return new CollectionPointTokenDTO
+            {
+                Token = Authentication.GenerateToken(collectionPoint)
+            };
+        }
+
         public async Task Update(CollectionPointEntity collection)
         {
             string sql = @"

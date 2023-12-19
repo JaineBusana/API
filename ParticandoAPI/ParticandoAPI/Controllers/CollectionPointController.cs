@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using ParticandoAPI.Contracts.Repository;
 using ParticandoAPI.DTO;
 using ParticandoAPI.Entity;
@@ -16,6 +17,7 @@ namespace ParticandoAPI.Controllers
             _CollectionPointRepository = collectionPointRepository;
         }
 
+        [Authorize]
         [HttpGet]
         public async Task<IActionResult> Get()
         {
@@ -28,6 +30,7 @@ namespace ParticandoAPI.Controllers
             return Ok(await _CollectionPointRepository.GetById(id));
         }
 
+        
         [HttpPost]
         public async Task<IActionResult> Create(CollectionPointDTO collectionPoint)
         {
@@ -47,6 +50,20 @@ namespace ParticandoAPI.Controllers
         {
             await _CollectionPointRepository.Delete(id);
             return Ok();
+        }
+
+        [HttpPost]
+        [Route("login")]
+        public async Task<IActionResult> CollectionPointLogin(CollectionPointLoginDTO collectionPointLogin)
+        {
+            try
+            {
+                return Ok(await _CollectionPointRepository.CollectionPointLogin(collectionPointLogin));
+            }
+            catch (Exception ex)
+            {
+                return Unauthorized("Nome ou telefone inválidos");
+            }
         }
 
     }
